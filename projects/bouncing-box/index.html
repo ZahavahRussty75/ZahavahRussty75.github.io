@@ -8,16 +8,18 @@
 		.box {
 			width: 70px;
 			height: 70px;
-			background-color: teal;
+			background-image: url(https://upload.wikimedia.org/wikipedia/en/e/ed/Nyan_cat_250px_frame.PNG);
+			background-size: cover;
 			font-size: 300%;
 			text-align: center;
-			display: block;
+			display: square;
 			position: absolute;
 			top: 100px;
 			left: 0px;  /* <--- Change me! */
 		}
 		.board{
 			height: 100vh;
+			background-image: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/5f8143ed-4ec0-4539-b8cf-827bc87f498a/d3l6i50-12ad4899-93d5-4445-a4dc-570cd5b26d9a.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzVmODE0M2VkLTRlYzAtNDUzOS1iOGNmLTgyN2JjODdmNDk4YVwvZDNsNmk1MC0xMmFkNDg5OS05M2Q1LTQ0NDUtYTRkYy01NzBjZDViMjZkOWEuanBnIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.ucfcdYqUY2e89X1aFcnWGKnk2zYqdw2G30IUlTtWgek");
 		}
 	</style>
 	<!-- 	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> -->
@@ -61,7 +63,9 @@
 			//////////////////////////////////////////////////////////////////
 			
 			// TODO 2 - Variable declarations 
-			
+			var positionX = 0; 
+			var points = 0;
+			var speed = 10;
 
 			
 			/* 
@@ -70,8 +74,12 @@
 			turn it around! 
 			*/
 			function update() {
+				/* Your Code to Increase positionX by 10 HERE*/
+				moveBoxTo(positionX)
+				positionX = positionX + speed ; 
+				if (positionX >  boardWidth ) {speed = -speed};
+				if (positionX < 0)  { speed = speed * -1}; 
 				
-
 			};
 
 			/* 
@@ -80,7 +88,13 @@
 			the left side of the screen.
 			*/
 			function handleBoxClick() {
+				positionX = 0; 
+				changeBoxText(points);
+				points = points + 1; 
 				
+				if (speed > 0) {speed = speed + 2;}
+				else if ( speed < 0 ) {speed = speed - 2};
+
 
 
 			};

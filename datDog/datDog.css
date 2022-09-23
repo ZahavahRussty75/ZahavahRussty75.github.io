@@ -1,0 +1,20 @@
+
+
+h1 {text-align: center;}
+h2 {text-align: center;}
+table,
+th,
+td {border: 1px solid black;
+    border-collapse: collapse;}
+ body {background-color:rgba(0, 221, 255, 0.475);}
+#main-content {border-color:moccasin 
+    ;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+background-color: rgba(0, 0, 255, 0.478
+);
+border: 1px solid rgba(0, 0, 0, 0.478);
+    border-collapse: collapse;
+    border-radius: 5px;
+}
+.datDog {font-family:cursive}
+#datTitle {font-family:fantasy ;}
