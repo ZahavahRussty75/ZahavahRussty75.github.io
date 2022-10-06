@@ -1,33 +1,66 @@
+h1 {
+    text-align: center;
+}
 
+h2 {
+    text-align: center;
+}
 
-h1 {text-align: center;}
-h2 {text-align: center;}
 table,
 th,
-td {border: 1px solid black;
+td {
+    border: 1px solid black;
     border-collapse: collapse;
     text-align: center;
-    width: 80%;
-    
-    
+    width: 73%;
+    left: auto;
+    right: auto;
+    margin-left: 200px;
 }
- body {background-color:rgba(255, 255, 255, 0.475);
-        text-align: center;}
-#main-content {border-color:moccasin 
-    ;
+
+body {
+    background-color: rgba(255, 255, 255, 0.475);
+    text-align: center;
+}
+
+#main-content {
+    border-color: moccasin;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-background-color: rgba(255, 179, 0, 0.478);
-border: .5px solid rgba(0, 0, 0, 0.478);
+    background-color: rgba(255, 179, 0, 0.478);
+    border: .5px solid rgba(0, 0, 0, 0.478);
+    border-collapse: collapse;
+    border-radius: 50px;
+    margin-left: 200px;
+    margin-right: 200px;
+}
+
+.datDog {
+    font-family: cursive
+}
+
+#datTitle {
+    font-family: fantasy;
+}
+
+
+
+.yes {
+    width: 100%;
+}
+
+#logo {
+    border: 10px rgb(0, 0, 0);
     border-collapse: collapse;
     border-radius: 50px;
 }
-.datDog {font-family:cursive}
-#datTitle {font-family:fantasy ;}
 
+.link {
+    text-decoration: none;
+}
 
-
-.yes {width: 100%;
-    }
-#logo {border:10px rgb(0, 0, 0) ;
-        border-collapse: collapse;
-    border-radius: 50px;}
+nav {
+    background-color: rgba(255, 179, 0, 0.478);
+    border-radius: 10px;
+    margin-left: 200px;
+    margin-right: 200px;
+}
