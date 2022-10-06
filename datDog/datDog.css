@@ -63,4 +63,7 @@ nav {
     border-radius: 10px;
     margin-left: 200px;
     margin-right: 200px;
+    padding-top: auto;
+    padding-bottom: auto;
+    text-align: left;
 }
