@@ -8,7 +8,7 @@
 		.box {
 			width: 70px;
 			height: 70px;
-			background-image: url(https://upload.wikimedia.org/wikipedia/en/e/ed/Nyan_cat_250px_frame.PNG);
+			background-image:url("images/nyan\ cat.png");
 			background-size: cover;
 			font-size: 300%;
 			text-align: center;
@@ -30,6 +30,20 @@
 	<div class="box">?</div>
 
 	<script>
+		function sound(src) {
+  this.sound = document.createElement("audio");
+  this.sound.src = src;
+  this.sound.setAttribute("preload", "auto");
+  this.sound.setAttribute("controls", "none");
+  this.sound.style.display = "none";
+  document.body.appendChild(this.sound);
+  this.play = function(){
+    this.sound.play();
+  }
+  this.stop = function(){
+    this.sound.pause();
+  }
+}
 		(function(){
 			'use strict'
 			/* global jQuery */
@@ -51,6 +65,7 @@
 			// moves the Box to a new position on the screen along the X-Axis
 			function moveBoxTo(newPositionX) {
 				box.css("left", newPositionX);
+				
 			}
 
 			// changes the text displayed on the Box
@@ -66,7 +81,8 @@
 			var positionX = 0; 
 			var points = 0;
 			var speed = 10;
-
+			
+			
 			
 			/* 
 			This Function will be called 20 times/second. Each time it is called,
@@ -75,10 +91,11 @@
 			*/
 			function update() {
 				/* Your Code to Increase positionX by 10 HERE*/
-				moveBoxTo(positionX)
+				moveBoxTo(positionX,)
 				positionX = positionX + speed ; 
 				if (positionX >  boardWidth ) {speed = -speed};
 				if (positionX < 0)  { speed = speed * -1}; 
+				
 				
 			};
 
@@ -89,8 +106,9 @@
 			*/
 			function handleBoxClick() {
 				positionX = 0; 
-				changeBoxText(points);
 				points = points + 1; 
+				changeBoxText(points);
+				
 				
 				if (speed > 0) {speed = speed + 2;}
 				else if ( speed < 0 ) {speed = speed - 2};
